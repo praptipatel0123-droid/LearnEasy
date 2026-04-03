@@ -1,0 +1,23 @@
+interface Props {
+  size?: number;
+  className?: string;
+}
+
+export default function AppIcon({ size = 40, className = '' }: Props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      fill="none"
+      width={size}
+      height={size}
+      className={className}
+    >
+      <rect width="64" height="64" rx="16" fill="black" />
+      <path d="M32 14L10 24L32 34L54 24L32 14Z" fill="white" />
+      <path d="M20 29V40C20 40 24 46 32 46C40 46 44 40 44 40V29L32 34L20 29Z" fill="white" />
+      <line x1="54" y1="24" x2="54" y2="36" stroke="white" strokeWidth="3" strokeLinecap="round" />
+      <circle cx="54" cy="38" r="2.5" fill="white" />
+    </svg>
+  );
+}
